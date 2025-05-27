@@ -40,6 +40,12 @@ footer {
     font-family: "Raleway", sans-serif;
 }
 
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
 input {
     padding: 10px;
     border: 1px solid #FF7D29;
@@ -74,23 +80,8 @@ button {
     cursor: pointer;
 }
 
-.suggestions {
+.suggestions-container {
     margin: 20px 0;
-}
-
-.suggestion-list {
-   display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 0;
-    margin: 0;
-}
-
-.suggestion-item {
-    list-style: none;
     background-color: white;
-    border-radius: 8px;
-    border: 1px solid #FF7D29;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px
+    padding: 20px;
 }

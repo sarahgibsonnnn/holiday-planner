@@ -10,6 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 </head>
 <body>
     <div class="container">
@@ -18,18 +19,27 @@
             <p>Plan your next holiday with the help of AI</p>
         </header>
         <main>
-            <form>
-                <input type="text" id="destination" placeholder="Enter your holiday destination" autofocus required>
-                <input type="text" id="vibe" placeholder="What vibe are you looking for? e.g. party, food, romance" autofocus required>
-                <input type="number" id="number-of-days" placeholder="Enter number of days" required>
+            <form id="holiday-form">
+                <div class="input-group">
+                    <label for="destination">Where do you want to go?</label>
+                    <input type="text" id="destination" placeholder="E.g. Paris, London, Mexico" autofocus required>
+                </div>
+                <div class="input-group">
+                    <label for="vibe">What vibe are you looking for?</label>
+                    <input type="text" id="vibe" placeholder="e.g. party, food, romance" autofocus required>
+                </div>
+                <div class="input-group">
+                    <label for="duration">How many days are you going for?</label>
+                    <input type="number" id="duration" required>
+                </div>
                 <button type="submit" id="submit">Get suggestions</button>
             </form>
-            <div class="suggestions">
+            <div class="suggestions-container">
                 <h2>Suggestions</h2>
-                <ul class="suggestion-list">
-                    <li class="suggestion-item">Suggestion 1</li>
-                    <li class="suggestion-item">Suggestion 2</li>
-                </ul>
+                <div id="suggestions">
+                </div>
+            </div>
+          
         </main>
         <footer>
             This AI project was coded by <a href="https://github.com/sarahgibsonnnn" target="_blank">Sarah Gibson</a> and is <a href="https://github.com/sarahgibsonnnn/holiday-planner" target="_blank">open-sourced on GitHub</a> and is hosted on <a href="https://sarahs-holiday-planner.netlify.app/" target="_blank">Netlify</a>
